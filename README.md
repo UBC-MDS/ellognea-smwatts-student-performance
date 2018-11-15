@@ -25,8 +25,6 @@ We'll perform a two-tailed hypothesis test using a t-test. We'll work with the v
 #### 2-  Compute a test statistic that corresponds to the null hypothesis :
   Our test statistic is the difference in means.
   
-  ![](https://github.com/ellognea/DSCI_522-ellognea-smwatts-student-performance/tree/master/media/tes-statistic_image.png)
-
 #### 3-  Create a model of the null hypothesis:
 
   We'll use a t-distribution, with degrees of freedom equal to the Welch (or Satterthwaite) approximation to the degrees of freedom.
