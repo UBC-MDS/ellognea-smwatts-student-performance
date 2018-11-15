@@ -15,7 +15,7 @@ RStudio tidyverse
 
 ### Analysis plan
 
-We'll perform a two-tailed hypothesis test using a t-test. We'll work with the variables  "sex" - student's sex (binary: 'F' - female or 'M' - male) and "G3" - final grade (numeric: from 0 to 20, output target).  We'll split the data into two samples (female/male) and follow the five steps to hypothesis test
+We'll perform a two-tailed hypothesis test using a t-test. We'll work with the variables  "sex" - student's sex (binary: 'F' - female or 'M' - male) and "G3" - final grade (numeric: from 0 to 20, output target).  We'll split the data into two samples (female/male) and follow the five steps to hypothesis test :
   
 #### 1-  Define null and alternative hypotheses:
   Null hypothesis: The mean final math grade for male students and female students are equal.
