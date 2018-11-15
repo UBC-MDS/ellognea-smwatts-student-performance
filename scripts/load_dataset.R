@@ -1,4 +1,12 @@
+# load_dataset.R
+#
+# This script loads the data found in the "../data/student-math-perf.csv" file in this repo
+# This dataset was originally taken from https://archive.ics.uci.edu/ml/datasets/Student+Performance
+# This script takes no arguments.
+#
+# Usage: Rscript load_dataset.R
+
 library(tidyverse)
 
 student_math_perf <- read_csv("../data/student-math-perf.csv")
-View(student_math_perf)
+print(head(student_math_perf))
