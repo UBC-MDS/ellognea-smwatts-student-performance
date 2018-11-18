@@ -33,7 +33,7 @@ We'll perform a two-tailed hypothesis test using a t-test. We'll work with the v
    
 #### 5- Depending on where the test statistic falls, reject, or fail to reject the null hypothesis.
 
-  We'll use alpha = 0.05
+### Summary Plan
 
-Finally, we'll create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. We'll also apply broom::tidy to the output of t.test to get a tidy data frame version of the results.
+We'll create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. We'll also apply broom::tidy to the output of t.test to get a tidy data frame version of the results.
 
