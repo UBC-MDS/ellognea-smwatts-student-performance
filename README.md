@@ -8,7 +8,7 @@ We wil work with the UCI Student Performance Data Set (https://archive.ics.uci.e
 The data set contains math and portuguese grades of high school students attending two Portuguese schools : Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features.
 
 ### Script to load the data
-https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/scripts/load_dataset.R
+https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/src/load_dataset.R
 
 ### Dependencies
 RStudio tidyverse 
@@ -32,6 +32,8 @@ We'll perform a two-tailed hypothesis test using a t-test. We'll work with the v
 #### 4- See where the test statistic falls on the distribution
    
 #### 5- Depending on where the test statistic falls, reject, or fail to reject the null hypothesis.
+
+  We'll use alpha = 0.05
 
 Finally, we'll create a visualization of the data that shows the estimate, confidence intervals and distribution for each sample. We'll also apply broom::tidy to the output of t.test to get a tidy data frame version of the results.
 
