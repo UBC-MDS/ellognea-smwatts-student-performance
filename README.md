@@ -3,7 +3,7 @@
 ### Project's repo URL 
 https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance
 
-We wil work with the UCI Student Performance Data Set (https://archive.ics.uci.edu/ml/datasets/Student+Performance) to answer the following inferential question : Does the gender of a student affect their final math grade ?
+We will work with the UCI Student Performance Data Set (https://archive.ics.uci.edu/ml/datasets/Student+Performance) to answer the following inferential question : Does the gender of a student affect their final math grade ?
 
 The data set contains math and portuguese grades of high school students attending two Portuguese schools : Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features.
 
