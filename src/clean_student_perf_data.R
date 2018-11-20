@@ -1,4 +1,5 @@
 # src/clean_student_perf_data.R
+# Sarah Watts, Oct 20 2018
 #
 # This script writes a clean version of the "data/student-math-perf.csv" data
 # This dataset was originally taken from https://archive.ics.uci.edu/ml/datasets/Student+Performance

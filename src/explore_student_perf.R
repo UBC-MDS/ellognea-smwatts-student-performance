@@ -1,4 +1,5 @@
 # src/explore_student_perf.R
+# Sarah Watts, Oct 20 2018
 #
 # This script explores the data in "data/clean-student-math-perf.csv" data
 # This script takes in two arguments

@@ -1,4 +1,5 @@
 # src/load_student_perf_data.R
+# Sarah Watts, Oct 15 2018
 #
 # This script loads the data found in the "data/student-math-perf.csv" file in this repo
 # This dataset is taken from: https://archive.ics.uci.edu/ml/datasets/Student+Performance
