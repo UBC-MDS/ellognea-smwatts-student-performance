@@ -28,7 +28,7 @@ main <- function(){
   hist_student_perf <- student_math_perf %>% ggplot(aes(x=final_math_grade)) +
     geom_histogram(bins = 20) + facet_grid(. ~ sex, labeller = as_labeller(sex_labels)) +
     ggtitle("Distribution of Math Grades by Gender") +
-    xlab("Final math grade") + ylab("Count") + 
+    xlab("Final math grade (%)") + ylab("Count") + 
     theme_bw() + 
     theme(panel.background = element_blank(), panel.grid.major = element_blank(),
           panel.grid.minor = element_blank())
