@@ -1,4 +1,4 @@
-# explore_student_perf.R
+# src/explore_student_perf.R
 #
 # This script explores the data in "data/clean-student-math-perf.csv" data
 # This script takes in two arguments
