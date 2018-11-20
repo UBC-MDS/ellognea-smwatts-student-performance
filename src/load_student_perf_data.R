@@ -1,4 +1,4 @@
-# load_dataset.R
+# load_student_perf_data.R
 #
 # This script loads the data found in the "data/student-math-perf.csv" file in this repo
 # This dataset was originally taken from https://archive.ics.uci.edu/ml/datasets/Student+Performance

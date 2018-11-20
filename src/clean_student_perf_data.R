@@ -1,4 +1,4 @@
-# load_dataset.R
+# clean_student_perf_data.R
 #
 # This script writes a clean version of the "data/student-math-perf.csv" data
 # This dataset was originally taken from https://archive.ics.uci.edu/ml/datasets/Student+Performance
@@ -22,7 +22,7 @@ main <- function(){
   # read in data
   student_math_perf <- read_csv(input_file)
   print(head(student_math_perf))
-  clean_student_math_perf <- student_math_perf %>% select(sex,G3) %>% rename(final_math_grade = G3)
+  clean_student_math_perf <- student_math_perf %>% mutate(final_math_grade = G3/20 ) %>% select(sex,final_math_grade)
   write_csv(clean_student_math_perf, output_file)
 }
 
