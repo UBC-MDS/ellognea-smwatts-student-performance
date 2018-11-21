@@ -27,7 +27,6 @@ main <- function(){
                                 mutate(sex = replace(sex, sex == 'F', 'Female')) %>% 
                                 mutate(sex = replace(sex, sex == 'M', 'Male')) %>%
                                 select(sex,final_math_grade)
-  clean_student_math_perf
   write_csv(clean_student_math_perf, output_file)
 }
 
