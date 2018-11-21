@@ -8,10 +8,11 @@ We will work with the UCI Student Performance Data Set (https://archive.ics.uci.
 The data set contains math and portuguese grades of high school students attending two Portuguese schools : Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features.
 
 ### Script to load the data
-https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/src/load_dataset.R
+https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/src/load_student_perf_data.R
 
 ### Dependencies
 RStudio tidyverse 
+RStudio ggplot2
 
 ### Analysis plan
 
