@@ -48,7 +48,9 @@ violin <- function(student_math_perf){
     theme_bw() + ggtitle("Distribution of Math Grades by Gender") +
     xlab("Gender") + ylab("Final math grade (%)") +
     geom_errorbar(data=student_perf_est, aes(x=sex, ymax=ci_upper, ymin=ci_lower), width=0.3) +
-    geom_point(data=student_perf_est,aes(x=sex, y=mean_grade))
+    geom_point(data=student_perf_est,aes(x=sex, y=mean_grade))  + 
+    theme(panel.background = element_blank(), panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank())
   ggsave(file = voilin_file, plot = violin_student_perf, width = 4, height = 3, dpi = 120)
 }
 
@@ -56,8 +58,6 @@ violin <- function(student_math_perf){
 main <- function(){
   # read in data
   student_math_perf <- read_csv(input_file)
-  student_math_perf <- student_math_perf %>% mutate(sex = replace(sex, sex == 'F', 'Female')) %>% 
-                        mutate(sex = replace(sex, sex == 'M', 'Male'))
   hist(student_math_perf)
   violin(student_math_perf)
 }

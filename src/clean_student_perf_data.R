@@ -23,7 +23,11 @@ main <- function(){
   # read in data
   student_math_perf <- read_csv(input_file)
   print(head(student_math_perf))
-  clean_student_math_perf <- student_math_perf %>% mutate(final_math_grade = round(G3/20*100,0)) %>% select(sex,final_math_grade)
+  clean_student_math_perf <- student_math_perf %>% mutate(final_math_grade = round(G3/20*100,0)) %>% 
+                                mutate(sex = replace(sex, sex == 'F', 'Female')) %>% 
+                                mutate(sex = replace(sex, sex == 'M', 'Male')) %>%
+                                select(sex,final_math_grade)
+  clean_student_math_perf
   write_csv(clean_student_math_perf, output_file)
 }
 

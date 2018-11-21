@@ -12,6 +12,7 @@ https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/ma
 
 ### Dependencies
 RStudio tidyverse 
+RStudio ggplot2
 
 ### Analysis plan
 
