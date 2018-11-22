@@ -1,4 +1,4 @@
-# src/t-test-results.R
+# src/t-test_results.R
 # Orphelia Ellogne, Oct 21 2018
 #
 # This script performs a t-test on the clean data : data/clean-student-math-perf.csv
@@ -8,7 +8,7 @@
 #
 # Note: Commands must be run from the root of this repo
 #
-# Usage: Rscript src/t-test-results.R data/clean-student-math-perf.csv results/t-test-results.csv
+# Usage: Rscript src/t-test-results.R data/clean-student-math-perf.csv results/t-test_results.csv
 
 
 library(tidyverse)
