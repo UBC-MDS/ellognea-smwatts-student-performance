@@ -4,7 +4,7 @@
 # This script loads the data found in the "data/student-math-perf.csv" file in this repo
 # This dataset is taken from: https://archive.ics.uci.edu/ml/datasets/Student+Performance
 # This script takes in one arguments
-# 1. The argument for the path & filenmae to the clean dataset (i.e. "data/student-math-perf.csv")
+# 1. The argument for the path & filename to the clean dataset (i.e. "data/student-math-perf.csv")
 #
 # Note: Commands must be run from the root of this repo
 #

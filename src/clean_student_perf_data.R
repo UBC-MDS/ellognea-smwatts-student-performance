@@ -4,7 +4,7 @@
 # This script writes a clean version of the "data/student-math-perf.csv" data
 # This dataset was originally taken from https://archive.ics.uci.edu/ml/datasets/Student+Performance
 # This script takes in two arguments
-# 1. The argument for the path & filenmae to the input dataset (i.e. "data/student-math-perf.csv")
+# 1. The argument for the path & filename to the input dataset (i.e. "data/student-math-perf.csv")
 # 2. The argument for the path & filename to write the output tidy dataset (i.e. "data/clean-student-math-perf.csv")
 #
 # Note: Commands must be run from the root of this repo
