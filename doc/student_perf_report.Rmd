@@ -1,0 +1,38 @@
+---
+title: "student_perf_report"
+author: "Sarah Watts"
+date: '2018-11-22'
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Relationship between gender and math grades.
+
+Our goal of this project is to understand if there is a statistically significant difference in the mean final grade for male and female students in the [UCI Student Performance dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance). This dataset is comprised of the final math grade achieved in secondary education for two Portuguese schools. Each row in the dataset represents a student. There are two columns in this tibble, sex and final_math_grade. Sex is a categorical variable that contains the value `female` and `male`. final_math_grade is a continous variable that ranges from 0-100, based on the percentage earned by a student.
+
+A sample of this dataset is shown below.
+
+```{r, include=FALSE}
+student_math_perf <- read_csv('../data/clean-student-math-perf.csv')
+```
+
+```{r, include=TRUE}
+head(student_math_perf)
+```
+
+More information about the two columns are summarized below. There are 395 students present in this dataset. The final math grade is primarily concentrated between 40%-70%, with a mean of 52%. 
+
+```{r, include=TRUE}
+summary(student_math_perf)
+```
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+![](../results/violin-student-math-perf.png)
