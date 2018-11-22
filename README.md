@@ -15,13 +15,14 @@ The data analysis is carried out in 4 scripts saved in the ./src/folder and ran 
 
 2- **clean_student_perf_data.R** : cleans the "data/student-math-perf.csv" data and saves it as "data/clean-student-math-perf.csv"
 
-3- **explore_student_perf.R** :  creates a visualization of the data in "data/clean-student-math-perf.csv" data that shows the mean, confidence intervals and distribution of each sample.
+3- **explore_student_perf.R** :  creates a visualization of the data in "data/clean-student-math-perf.csv" that shows the mean, confidence intervals and distribution of each sample
 
-4- **t-test_results.R**: performs a t-test on the data/clean-student-math-perf.csv data and saves the summary table as results/t-test_results.csv
+4- **t-test_results.R**: performs a t-test on the "data/clean-student-math-perf.csv" data and saves the summary table as "results/t-test_results.csv"
 
 ### Dependencies
 
 RStudio tidyverse 
+
 RStudio ggplot2
 
 ### Report
