@@ -3,7 +3,7 @@
 #
 # This script explores the data in "data/clean-student-math-perf.csv" data
 # This script takes in two arguments
-# 1. The argument for the path & filenmae to the clean dataset (i.e. "data/clean-student-math-perf.csv")
+# 1. The argument for the path & filename to the clean dataset (i.e. "data/clean-student-math-perf.csv")
 # 2. The argument for the path & filename to write a histogram of the dataset (i.e. "results/hist-student-math-perf.png")
 # 3. The argument for the path & filename to write a violin plot of the dataset(i.e. "results/violin-student-math-perf.png")
 # 
