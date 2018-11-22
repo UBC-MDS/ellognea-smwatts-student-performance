@@ -11,13 +11,13 @@ The results of a two-tailed hypothesis test are reported as well as a visualizat
 
 The data analysis is carried out in 4 scripts saved in the ./src/folder and ran in the following order :
 
-1- **clean_student_perf_data.R** : cleans the "data/student-math-perf.csv" data and saves it as "data/clean-student-math-perf.csv"
+1- **clean_student_perf_data.R** : cleans the original data and saves the transforms data
 
-2- **explore_student_perf.R** :  creates a violin and jitter plot from "data/clean-student-math-perf.csv" data
+2- **explore_student_perf.R** :  creates a visualization of the data distribution with a violin/jitter plot 
 
-3- **t-test_estimate_tables.R**: uses data/clean-student-math-perf.csv data to perform a t-test and calculate the estimate and confidence intervals for each sample.
+3- **t-test_estimate_tables.R**: performs a t-test and calculates the estimate and confidence intervals for each sample
 
-4- **mean_CI_plot.R** : uses the results/estimate_table.csv table to create a visualization of the mean and confidence intervals for each sample.
+4- **mean_CI_plot.R** : creates a visualization of the mean and confidence intervals for each sample
 
 ### Dependencies
 
