@@ -1,9 +1,9 @@
-# DSCI_522-ellognea-smwatts-student-performance
+# Relationship between gender and math grades.
 
 Does the gender of a student affect their final math grade ?
 
 This project uses the UCI Student Performance Data Set (https://archive.ics.uci.edu/ml/datasets/Student+Performance) to evaluate the relationship between a student gender (Female/Male) and their final math grade. 
-The data set contains math and portuguese grades of high school students attending two Portuguese schools : Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features. 
+The data set contains math and portuguese grades of high school students attending two portuguese schools : Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features. 
 
 The results of a two-tailed hypothesis test are reported as well as a visualization of the data that shows the mean, confidence intervals and distribution for each sample (Female and Male).
 
@@ -11,13 +11,13 @@ The results of a two-tailed hypothesis test are reported as well as a visualizat
 
 The data analysis is carried out in 4 scripts saved in the ./src/folder and ran in the following order :
 
-1- **load_student_perf_data.R** : loads the data found in the "data/student-math-perf.csv" file of this repository
+1- **clean_student_perf_data.R** : cleans the "data/student-math-perf.csv" data and saves it as "data/clean-student-math-perf.csv"
 
-2- **clean_student_perf_data.R** : cleans the "data/student-math-perf.csv" data and saves it as "data/clean-student-math-perf.csv"
+2- **explore_student_perf.R** :  creates a violin and jitter plot from "data/clean-student-math-perf.csv" data
 
-3- **explore_student_perf.R** :  creates a visualization of the data in "data/clean-student-math-perf.csv" that shows the mean, confidence intervals and distribution of each sample
+3- **t-test_estimate_tables.R**: uses data/clean-student-math-perf.csv data to perform a t-test and calculate the estimate and confidence intervals for each sample.
 
-4- **t-test_results.R**: performs a t-test on the "data/clean-student-math-perf.csv" data and saves the summary table as "results/t-test_results.csv"
+4- **mean_CI_plot.R** : uses the results/estimate_table.csv table to create a visualization of the mean and confidence intervals for each sample.
 
 ### Dependencies
 
