@@ -1,6 +1,6 @@
 ---
 title: "student_perf_report"
-author: "Sarah Watts"
+author: "Sarah Watts, Orphelia Ellogne"
 date: '2018-11-22'
 output: github_document
 ---
@@ -51,9 +51,21 @@ $H_A: p_{female} \neq p_{male}$
 
 The null hypothesis is that the mean math grade for male and female students is equal, where as the alternative hypothesis is that they are not. Since the distributions are very similar, a two tail test was selected.
 
+### Limitations and future directions 
 
+This analysis has two main limitations. First, the study sample is not representative of all students because the data was collected from two Portuguese schools. Hence, it is possible that the statistically significant results may not be generalized to students in other schools and/or countries.
 
-## References
+Second, the study does not consider other demographic and social variables such as family size, family income and parents' education that could also impact a student achievement. This means that the results could suffer from omitted variables bias. 
 
-Among Top Math Students, Why Does a Gender Gap Persist?, Knowledge@Warton, 2018: http://knowledge.wharton.upenn.edu/article/gender-gap-mathematics-achievement/
+In the future, these limitations could be overcome by performing a multiple linear regression analysis with a more diverse dataset. This approach will estimate whether math grades vary by gender while other explanatory variables are held fixed.
 
+In spite of these limitations, the results are consistent with existing researches findings (Ghazvini and Khajehpour, 2011; Abdu Raheem, 2017)
+
+### References
+
+Ghazvini, Sayid and Khajehpour, Milad. (2011). Gender differences in factors affecting academic performance of
+high school students.
+
+Abdu Raheem B.O.(2017-10-09).The Influence of Gender on Secondary School Students' Academic Performance in South-West, Nigeria.
+
+Knowledge@Warton, (2018). Among Top Math Students, Why Does a Gender Gap Persist?. http://knowledge.wharton.upenn.edu/article/gender-gap-mathematics-achievement/
