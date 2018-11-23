@@ -12,7 +12,9 @@ library(tidyverse)
 
 ## Relationship between gender and math grades.
 
-Our goal of this project is to understand if there is a statistically significant difference in the mean final grade for male and female students in the [UCI Student Performance dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance). This dataset is comprised of the final math grade achieved in secondary education for two Portuguese schools. Each row in the dataset represents a student. There are two columns in this tibble, sex and final_math_grade. Sex is a categorical variable that contains the value `female` and `male`. final_math_grade is a continous variable that ranges from 0-100, based on the percentage earned by a student.
+Our goal of this project is to understand if there is a statistically significant difference in the mean final grade for male and female students in the [UCI Student Performance dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance). This dataset is comprised of the final math grade achieved in secondary education for two Portuguese schools. This question was chosen because it explores the area of research surrounding the gender gap in STEM. Researches such as Wharton health care management professor Ashley Swanson have cited the gender gap for performance in secondary school mathematics as a leading cause for the gender gap in pay. This supports the need for research in this area (Knowledge@Wharton, 2018).
+
+Each row in the UCI Student Performance dataset represents a student. There are two columns in this dataset that will be analyzed, sex and final_math_grade. Sex is a categorical variable that contains the values `female` and `male`. final_math_grade is a continous variable that ranges from 0-100, based on the grade percentage earned by a student.
 
 A sample of this dataset is shown below.
 
@@ -24,11 +26,13 @@ student_math_perf <- read_csv('../data/clean-student-math-perf.csv')
 head(student_math_perf)
 ```
 
-More information about the two columns are summarized below. There are 395 students present in this dataset. The final math grade is primarily concentrated between 40%-70%, with a mean of 52%. 
+There are 395 students present in this dataset, 208 are female and 187 are male.
 
 ```{r, include=TRUE}
-summary(student_math_perf)
+student_math_perf %>% group_by(sex) %>% summarise(count = n()) %>% select(sex, count) 
 ```
+
+The distribution of the dataset is shown below. Female students are more highly concentrated around the 50% range than male students. There are also more female students who scored 0% in their math class. Only male students have scored the top grade of 100%. However, overall the distributions are similar in shape.
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -36,3 +40,20 @@ library(tidyverse)
 ```
 
 ![](../results/violin-student-math-perf.png)
+The final math grade is primarily concentrated between 45%-70%, with a mean of 52%. 
+
+![](../results/mean_CI_plot.png)
+
+To determine if there was a statistically significant difference in the mean math grade for male and female students a null and an alternative hypothesis was defined.
+
+$H_0: p_{female} = p_{male}$
+$H_A: p_{female} \neq p_{male}$
+
+The null hypothesis is that the mean math grade for male and female students is equal, where as the alternative hypothesis is that they are not. Since the distributions are very similar, a two tail test was selected.
+
+
+
+## References
+
+Among Top Math Students, Why Does a Gender Gap Persist?, Knowledge@Warton, 2018: http://knowledge.wharton.upenn.edu/article/gender-gap-mathematics-achievement/
+

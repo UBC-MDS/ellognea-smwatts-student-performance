@@ -1,4 +1,4 @@
-# src/mean_CI_plot.R
+# src/report_mean_CI.R
 # Orphelia Ellogne, Oct 22 2018
 #
 # This script uses the results/estimate_table.csv table to create a visualization of the mean and confidence intervals for each sample.
@@ -9,7 +9,7 @@
 
 # Note: Commands must be run from the root of this repo
 #
-# Usage: Rscript src/mean_CI_plot.R results/estimate_table.csv results/mean_CI_plot.png
+# Usage: Rscript src/report_mean_CI.R results/estimate_table.csv results/mean_CI_plot.png
 
 
 library(tidyverse)

@@ -15,9 +15,9 @@ The data analysis is carried out in 4 scripts saved in the ./src/folder and ran 
 
 2- **explore_student_perf.R** :  creates a visualization of the data distribution with a violin/jitter plot 
 
-3- **t-test_estimate_tables.R**: performs a t-test and calculates the estimate and confidence intervals for each sample
+3- **analysis_t-test_estimates.R**: performs a t-test and calculates the estimate and confidence intervals for each sample
 
-4- **mean_CI_plot.R** : creates a visualization of the mean and confidence intervals for each sample
+4- **report_mean_CI.R** : creates a visualization of the mean and confidence intervals for each sample
 
 ### Dependencies
 
