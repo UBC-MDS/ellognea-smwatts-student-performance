@@ -9,7 +9,7 @@ The results of a two-tailed hypothesis test are reported as well as a visualizat
 
 ### Scripts
 
-The data analysis is carried out in 4 scripts saved in the ./src/folder and ran in the following order :
+The data analysis is carried out in 4 scripts saved in the ./src/folder and ran in the following order:
 
 1- **clean_student_perf_data.R** : cleans the original data and saves the transforms data
 
