@@ -3,7 +3,7 @@
 Does the gender of a student affect their final math grade?
 
 This project uses the UCI Student Performance Data Set (https://archive.ics.uci.edu/ml/datasets/Student+Performance) to evaluate the relationship between a student gender (Female/Male) and their final math grade. 
-The data set contains math and portuguese grades of high school students attending two portuguese schools : Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features. 
+The data set contains math and portuguese grades of high school students attending two portuguese schools: Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features. 
 
 The results of a two-tailed hypothesis test are reported as well as a visualization of the data that shows the mean, confidence intervals and distribution for each sample (Female and Male).
 
