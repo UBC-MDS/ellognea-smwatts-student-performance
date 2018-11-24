@@ -26,13 +26,13 @@ Table 1: Sample rows from the UCI Student Performance dataset
 knitr::kable(head(student_math_perf))
 ```
 
-There are 395 students present in this dataset, 208 are female and 187 are male. The distribution of final math grades are shown below. Female students are more highly concentrated around the 50% range than male students. There are also more female students who scored 0% in their math class. Only male students have scored the top grade of 100%. However, overall the distributions are similar in shape.
+There are 395 students present in this dataset, 208 are female and 187 are male. The distribution of final math grades are shown below. Female students are more highly concentrated around the 50% range than male students. There are also more female students who scored 0% in their math class. Only male students have scored the top grade of 100%. However, overall the distributions are similar in shape, with final math grades primarily concentrated between 45 to 70 percent and an overall mean grade of 52 percent.
 
 ![](../results/violin-student-math-perf.png)
 
 Figure 1: Distirbution of math grades by gender
 
-Overall, final math grade is primarily concentrated between 45%-70%, with a mean of grade 52%. This is visible in the mean and confidence interval graph below.
+The mean final math grade achieved by female students is 49.8%, whereas the mean final math grade achieved by male students is 54.6%. This is shown in the following figure, which provides these sample estimates and the confidence intervals by gender.
 
 ![](../results/mean_CI_plot.png)
 
