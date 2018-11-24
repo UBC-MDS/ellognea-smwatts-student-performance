@@ -1,4 +1,4 @@
-# src/t-test_estimate_tables.R
+# src/analysis_t-test_estimates.R
 # Orphelia Ellogne, Oct 21 2018
 #
 # This script uses the clean data : data/clean-student-math-perf.csv to calculate the estimate and confidence intervals for each sample and to perform a t-test.
@@ -11,7 +11,7 @@
 
 # Note: Commands must be run from the root of this repo
 #
-# Usage: Rscript src/t-test_estimate_tables.R data/clean-student-math-perf.csv  results/estimate_table.csv results/t-test_results.csv
+# Usage: Rscript src/analysis_t-test_estimates.R data/clean-student-math-perf.csv  results/estimate_table.csv results/t-test_results.csv
 
 
 library(tidyverse)
