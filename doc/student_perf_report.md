@@ -4,7 +4,7 @@ Sarah Watts and Orphelia Ellogne
 The relationship between gender and math grades
 -----------------------------------------------
 
-Our goal of this project is to understand if there is a statistically significant difference in the mean final grade for male and female students in the [UCI Student Performance dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance). This dataset is comprised of the final math grade achieved in secondary education for two Portuguese schools. This question was chosen because it explores the area of research surrounding the gender gap in STEM. Researches such as Wharton's health care management professor Ashley Swanson have cited the gender gap for performance in secondary school mathematics as a leading cause for the gender gap in pay. This supports the need for research in this area (Knowledge @ Wharton, 2018).
+Our goal of this project is to understand if there is a statistically significant difference in the mean final grade for male and female students in the [UCI Student Performance dataset](https://archive.ics.uci.edu/ml/datasets/Student+Performance). This dataset is comprised of the final math grade achieved in secondary education for two Portuguese schools. This question was chosen because it explores the area of research surrounding the gender gap in STEM. Researchers such as Wharton's health care management professor Ashley Swanson have cited that the gender gap for performance in secondary school mathematics is a leading cause for the gender gap in pay. This supports the need for research in this area (Knowledge @ Wharton, 2018).
 
 The data
 --------
@@ -39,9 +39,10 @@ Figure 2: Final math grade mean and confidence interval by gender
 To determine if there was a statistically significant difference in the mean math grade for male and female students a null and an alternative hypothesis was defined.
 
 *H*<sub>0</sub>: mean of female student math grades = mean of male student math grades
+
 *H*<sub>*A*</sub>: mean of female student math grades ≠ mean of male student math grades
 
-The null hypothesis is that the mean math grade for male and female students is equal, whereas the alternative hypothesis is that they are not. Since the distributions are similar, a two tail test was selected.
+The null hypothesis is that the mean math grade for male and female students is equal, whereas the alternative hypothesis is that they are not. Since the distributions are similar, a two tail test was selected. Additionally, a Welch t-test was selected because the samples have unequal variances
 
 Table 2: Hypothesis test results for *H*<sub>0</sub>: mean of female student math grades = mean of male student math grades
 

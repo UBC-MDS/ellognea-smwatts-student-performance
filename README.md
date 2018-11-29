@@ -1,4 +1,4 @@
-# Relationship between gender and math grades.
+# Relationship between gender and math grades
 
 Does the gender of a student affect their final math grade?
 
@@ -21,16 +21,15 @@ The data analysis is carried out in 4 scripts saved in the ./src/folder and ran 
 
 ### Dependencies
 
-RStudio tidyverse  
+RStudio [tidyverse (version 1.2.1)](https://www.tidyverse.org)
 
-RStudio ggplot2 
+RStudio [ggplot2 (version 3.1.0)](https://ggplot2.tidyverse.org/reference/ggplot.html)
+
+### Usage
+
+Use the [run_all]((https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/run_all.sh) script: bash run_all.sh
 
 ### Report
 
 The final report is saved as an Rmd file in ./doc folder. It presents the original data, the statistical summary, and the figures.
-
-
-### Project's repo URL 
-
-https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance
 
