@@ -9,9 +9,9 @@ Our goal of this project is to understand if there is a statistically significan
 The data
 --------
 
-Each row in the UCI Student Performance dataset represents a student. There are two columns in this dataset that will be analyzed, sex and final\_math\_grade. Sex is a categorical variable that contains the values `female` and `male`. final\_math\_grade is a continous variable that ranges from 0-100, based on the final grade percentage earned by a student.
+Each row in the UCI Student Performance dataset represents a student. There are two columns in this dataset that will be analyzed, sex and final\_math\_grade. Sex is a categorical variable that contains the values `female` and `male`. final\_math\_grade is a continuous variable that ranges from 0-100, based on the final grade percentage earned by a student.
 
-Table 1: Sample rows from the UCI Student Performance dataset
+Table 1: Sample rows from the UCI Student Performance dataset, showing a students gender and final math grade
 
 | sex    |  final\_math\_grade|
 |:-------|-------------------:|
@@ -26,13 +26,13 @@ There are 395 students present in this dataset, 208 are female and 187 are male.
 
 ![](../results/violin-student-math-perf.png)
 
-Figure 1: Distribution of math grades by gender
+Figure 1: Distribution of final math grade percentages earned by students, displayed by gender in a jitter and scatter plot
 
 The mean final math grade achieved by female students is 49.8%, whereas the mean final math grade achieved by male students is 54.6%. This is shown in the following figure, which provides these sample estimates and the confidence intervals by gender.
 
 ![](../results/mean_CI_plot.png)
 
-Figure 2: Final math grade mean and confidence interval by gender
+Figure 2: Mean final grade earned by students in math by gender (male/female). Error bars represent 95% confidence intervals.
 
 ### Findings
 
@@ -44,17 +44,17 @@ To determine if there was a statistically significant difference in the mean mat
 
 The null hypothesis is that the mean math grade for male and female students is equal, whereas the alternative hypothesis is that they are not. Since the distributions are similar, a two tail test was selected. Additionally, a Welch t-test was selected because the samples have unequal variances.
 
-Table 2: Hypothesis test results for *H*<sub>0</sub>: mean of female student math grades = mean of male student math grades
+Table 2: Hypothesis test results for *H*<sub>0</sub>: mean of female student math grades = mean of male student math grades. P-value indicates that gender has a statistically significant result on the mean math grade.
 
 | method                  | alternative |   p.value|
 |:------------------------|:------------|---------:|
 | Welch Two Sample t-test | two.sided   |  0.039577|
 
-The resulting p-value from the Welch two sample t-test (which was selected to compare the two means) is 0.039577. To be 95% confident in the findings of this t-test an alpha value of 0.05 is selected. Therefore, since the p-value is less than alpha (at 0.039577), the null hypothesis is rejected and the alternative hypothesis is accepted.
+The resulting p-value from the Welch two sample t-test (which was selected to compare the two means) is 0.039577. To be 95% confident in the findings of this t-test an alpha value of 0.05 is selected. Therefore, since the p-value is less than alpha (at 0.039577), the null hypothesis is rejected.
 
-The p-value increases to 0.0533 when the 38 students who scored 0% in their final math grade are dropped from the dataset, which is not a major difference.
+Furthering the analysis, when the 38 student outliers who scored 0% in their final math grade are dropped from the dataset the p-value generated is 0.05. This does not change the decision to reject the null hypothesis.
 
-The alternative hypothesis is that gender does have an impact on the mean grade obtained by students at these two Portuguese schools. This is a disappointing finding in the hope for gender equality.
+The alternative hypothesis is that gender does have an impact on the mean grade obtained by students at these two Portuguese schools. Rejecting the null hypothesis is a disappointing finding in the hope for gender equality.
 
 ### Limitations and future directions
 
