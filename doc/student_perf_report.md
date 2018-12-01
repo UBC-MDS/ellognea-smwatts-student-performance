@@ -1,5 +1,5 @@
 Sarah Watts and Orphelia Ellogne
-2018-11-22
+2018-11-29
 
 The relationship between gender and math grades
 -----------------------------------------------
@@ -22,11 +22,11 @@ Table 1: Sample rows from the UCI Student Performance dataset
 | Female |                  50|
 | Male   |                  75|
 
-There are 395 students present in this dataset, 208 are female and 187 are male. The distribution of final math grades are shown below. Female students are more highly concentrated around the 50% range than male students. There are also more female students who scored 0% in their math class. Only male students have scored the top grade of 100%. However, overall the distributions are similar in shape, with final math grades primarily concentrated between 45 to 70 percent and an overall mean grade of 52 percent.
+There are 395 students present in this dataset, 208 are female and 187 are male. The distribution of final math grades are shown below. Female students are more highly concentrated around the 50% range than male students. There are also more female students who scored 0% in their math class (23 female vs. 15 male). Only male students have scored the top grade of 100%. However, overall the distributions are similar in shape, with final math grades primarily concentrated between 45 to 70 percent and an overall mean grade of 52 percent.
 
 ![](../results/violin-student-math-perf.png)
 
-Figure 1: Distirbution of math grades by gender
+Figure 1: Distribution of math grades by gender
 
 The mean final math grade achieved by female students is 49.8%, whereas the mean final math grade achieved by male students is 54.6%. This is shown in the following figure, which provides these sample estimates and the confidence intervals by gender.
 
@@ -42,7 +42,7 @@ To determine if there was a statistically significant difference in the mean mat
 
 *H*<sub>*A*</sub>: mean of female student math grades ≠ mean of male student math grades
 
-The null hypothesis is that the mean math grade for male and female students is equal, whereas the alternative hypothesis is that they are not. Since the distributions are similar, a two tail test was selected. Additionally, a Welch t-test was selected because the samples have unequal variances
+The null hypothesis is that the mean math grade for male and female students is equal, whereas the alternative hypothesis is that they are not. Since the distributions are similar, a two tail test was selected. Additionally, a Welch t-test was selected because the samples have unequal variances.
 
 Table 2: Hypothesis test results for *H*<sub>0</sub>: mean of female student math grades = mean of male student math grades
 
@@ -50,7 +50,9 @@ Table 2: Hypothesis test results for *H*<sub>0</sub>: mean of female student mat
 |:------------------------|:------------|---------:|
 | Welch Two Sample t-test | two.sided   |  0.039577|
 
-The resulting p-value from the Welch two sample t-test (which was selected to compare the two means) is 0.039577. To be 95% confident in the findings of this t-test an alhpa value of 0.05 is selected. Therefore, since the p-value is less than alpha (at 0.039577), the null hypothesis is rejected and the alternative hypothesis is accepted.
+The resulting p-value from the Welch two sample t-test (which was selected to compare the two means) is 0.039577. To be 95% confident in the findings of this t-test an alpha value of 0.05 is selected. Therefore, since the p-value is less than alpha (at 0.039577), the null hypothesis is rejected and the alternative hypothesis is accepted.
+
+The p-value increases to 0.0533 when the 38 students who scored 0% in their final math grade are dropped from the dataset, which is not a major difference.
 
 The alternative hypothesis is that gender does have an impact on the mean grade obtained by students at these two Portuguese schools. This is a disappointing finding in the hope for gender equality.
 
