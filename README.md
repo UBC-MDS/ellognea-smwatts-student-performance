@@ -3,7 +3,7 @@
 Does the gender of a student affect their final math grade?
 
 This project uses the UCI Student Performance Data Set (https://archive.ics.uci.edu/ml/datasets/Student+Performance) to evaluate the relationship between a student gender (Female/Male) and their final math grade. 
-The data set contains math and portuguese grades of high school students attending two portuguese schools: Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features. 
+The data set contains math and Portuguese grades of high school students attending two Portuguese schools: Gabriel Pereira (GP) and Mousinho da Silveira (MS) as well as demographics, social and school related features. 
 
 The results of a two-tailed hypothesis test that determine if there was a statistically significant difference in the mean math grade for male and female students is reported. Additionally, there is a visualization of the data that shows the mean, confidence intervals and distribution for each sample (Female and Male).
 
@@ -30,7 +30,36 @@ RStudio [ggplot2 (version 3.1.0)](https://github.com/tidyverse/ggplot2)
 | File           | Use      |
 |----------------|---------------|
 |[run_all](https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/run_all.sh) | bash run_all.sh |
-|[Makefile](https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/Makefile) |make clean <br> make all |  
+|[Makefile](https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/Makefile) |make clean <br> make all | 
+
+An overview of the analysis found in this repo is below. It includes the scripts that are run, the order they run in and the expected inputs/outputs:
+```
+# 1. clean the data found in the UCI Student Performance Data Set to only include relevant columns
+# input: data/student-math-perf.csv
+# output: data/clean-student-math-perf.csv
+Rscript src/clean_student_perf_data.R data/student-math-perf.csv data/clean-student-math-perf.csv
+
+# 2. create a violin and jitter plot to show the distribution of final math grades by gender
+# input: data/clean-student-math-perf.csv
+# output: results/violin-student-math-perf.png
+Rscript src/explore_student_perf.R data/clean-student-math-perf.csv results/violin-student-math-perf.png
+
+# 3.1 create a table with the mean and 95% confidence intervals for each sample (male and female students)
+# 3.2 test the hypothesis that the mean final math graded is equal for male and female students
+# input: data/clean-student-math-perf.csv
+# output: results/estimate_table.csv results/t-test_results.csv
+Rscript src/analysis_t-test_estimates.R data/clean-student-math-perf.csv  results/estimate_table.csv results/t-test_results.csv
+
+# 4. create a final plot for the means with error bars representing 95% confidence intervals
+# input: results/estimate_table.csv
+# output: results/mean_CI_plot.png
+Rscript src/report_mean_CI.R results/estimate_table.csv results/mean_CI_plot.png
+
+# 5. generate a final the report to reveal the findings of the hypothesis test
+# input: results/mean_CI_plot.png results/violin-student-math-perf.png data/clean-student-math-perf.csv results/t-test_results.csv
+# output: doc/student_perf_report.md
+Rscript -e "rmarkdown::render('doc/student_perf_report.Rmd')"
+```
 
 ### Report
 
