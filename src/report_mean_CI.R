@@ -20,9 +20,11 @@ output_img <- args[2]
 
 # define main function
 main <- function(){
+  
   # read in data
   estimate_table <- read_csv(input_file)
-  #plot
+  
+  # create the mean and confidence intervals plot
   mean_CI_plot <- ggplot(estimate_table,aes(x=sex, y= mean_grade)) +
     
     geom_point()  + 
