@@ -2,13 +2,14 @@
 # Sarah Watts, Oct 20 2018
 #
 # This script explores the data in "data/clean-student-math-perf.csv" data
+# It creates a volin & jitter plot for each sample (male/female) to display the distribution
 # This script takes in two arguments
 # 1. The argument for the path & filename to the clean dataset (i.e. "data/clean-student-math-perf.csv")
-# 2. The argument for the path & filename to write a violin plot of the dataset(i.e. "results/violin-student-math-perf.png")
+# 2. The argument for the path & filename to write a violin plot of the dataset (i.e. "results/violin-student-math-perf.png")
 # 
 # Note: Commands must be run from the root of this repo
 #
-# Usage: Rscript src/explore_student_perf.R data/clean-student-math-perf.csv results/violin-student-math-perf.png
+# Usage: Rscript src/explore_student_perf.R data/clean-student-math-perf.csv results/violin-student-math-perf.png  
 
 library(tidyverse)
 library(ggplot2)
@@ -17,7 +18,6 @@ library(ggplot2)
 args <- commandArgs(trailingOnly = TRUE)
 input_file <- args[1]
 voilin_file <- args[2]
-
 
 violin <- function(student_math_perf){
   violin_student_perf <- student_math_perf %>% 
@@ -39,7 +39,6 @@ main <- function(){
   student_math_perf <- read_csv(input_file)
   violin(student_math_perf)
 }
-
 
 # call main function
 main()

@@ -2,6 +2,8 @@
 # Sarah Watts, Oct 20 2018
 #
 # This script writes a clean version of the "data/student-math-perf.csv" data
+# The clean version of the data retains only relevant columns (gender & final math grade)
+# And transforms the final math grade to a percentage
 # This dataset was originally taken from https://archive.ics.uci.edu/ml/datasets/Student+Performance
 # This script takes in two arguments
 # 1. The argument for the path & filename to the input dataset (i.e. "data/student-math-perf.csv")
