@@ -3,3 +3,5 @@
 
 # use rocker/tidyverse as the base image and
 FROM rocker/tidyverse
+
+RUN pwd
