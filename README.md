@@ -27,35 +27,40 @@ RStudio [ggplot2 (version 3.1.0)](https://github.com/tidyverse/ggplot2)
 
 ### Usage
 
-| File           | Use      |
+You can reproduce our analysis with the following steps:
+
+1. Clone this repo. 
+2. Using the command line, navigate to the root of this project.
+3. Run the Makefile by typing following code in the terminal:
+
+| File           | Commands      |
 |----------------|---------------|
-|[run_all](https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/run_all.sh) | bash run_all.sh |
 |[Makefile](https://github.com/UBC-MDS/DSCI_522-ellognea-smwatts-student-performance/blob/master/Makefile) |make clean <br> make all | 
 
-An overview of the analysis found in this repo is below. It includes the scripts that are run, the order they run in and the expected inputs/outputs:
+The Makefile creates an entire data analysis pipeline for our project by executing the following scripts one by one:
 ```
-# 1. clean the data found in the UCI Student Performance Data Set to only include relevant columns
+# Step 1. clean the data found in the UCI Student Performance Data Set to only include relevant columns
 # input: data/student-math-perf.csv
 # output: data/clean-student-math-perf.csv
 Rscript src/clean_student_perf_data.R data/student-math-perf.csv data/clean-student-math-perf.csv
 
-# 2. create a violin and jitter plot to show the distribution of final math grades by gender
+# Step 2. create a violin and jitter plot to show the distribution of final math grades by gender
 # input: data/clean-student-math-perf.csv
 # output: results/violin-student-math-perf.png
 Rscript src/explore_student_perf.R data/clean-student-math-perf.csv results/violin-student-math-perf.png
 
-# 3.1 create a table with the mean and 95% confidence intervals for each sample (male and female students)
-# 3.2 test the hypothesis that the mean final math graded is equal for male and female students
+# Step 3. create a table with the mean and 95% confidence intervals for each sample (male and female students).
+# Test the hypothesis that the mean final math graded is equal for male and female students
 # input: data/clean-student-math-perf.csv
 # output: results/estimate_table.csv results/t-test_results.csv
 Rscript src/analysis_t-test_estimates.R data/clean-student-math-perf.csv  results/estimate_table.csv results/t-test_results.csv
 
-# 4. create a final plot for the means with error bars representing 95% confidence intervals
+# Step 4. create a final plot for the means with error bars representing 95% confidence intervals
 # input: results/estimate_table.csv
 # output: results/mean_CI_plot.png
 Rscript src/report_mean_CI.R results/estimate_table.csv results/mean_CI_plot.png
 
-# 5. generate a final the report to reveal the findings of the hypothesis test
+# Step 5. generate a final the report to reveal the findings of the hypothesis test
 # input: results/mean_CI_plot.png results/violin-student-math-perf.png data/clean-student-math-perf.csv results/t-test_results.csv
 # output: doc/student_perf_report.md
 Rscript -e "rmarkdown::render('doc/student_perf_report.Rmd')"
