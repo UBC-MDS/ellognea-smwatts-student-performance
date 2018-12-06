@@ -19,7 +19,10 @@ args <- commandArgs(trailingOnly = TRUE)
 input_file <- args[1]
 voilin_file <- args[2]
 
-violin <- function(student_math_perf){
+# define main function
+main <- function(){
+  # read in data
+  student_math_perf <- read_csv(input_file)
   violin_student_perf <- student_math_perf %>% 
     mutate(sex = fct_reorder(sex, final_math_grade)) %>% 
     ggplot(aes(sex)) +
@@ -31,13 +34,6 @@ violin <- function(student_math_perf){
     theme(panel.background = element_blank(), panel.grid.major = element_blank(),
           panel.grid.minor = element_blank())
   ggsave(file = voilin_file, plot = violin_student_perf, width = 4, height = 3, dpi = 120)
-}
-
-# define main function
-main <- function(){
-  # read in data
-  student_math_perf <- read_csv(input_file)
-  violin(student_math_perf)
 }
 
 # call main function
