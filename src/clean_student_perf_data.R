@@ -25,6 +25,8 @@ main <- function(){
   # read in data
   student_math_perf <- read_csv(input_file)
   print(head(student_math_perf))
+  
+  #clean the data
   clean_student_math_perf <- student_math_perf %>% mutate(final_math_grade = round(G3/20*100,0)) %>% 
                                 mutate(sex = replace(sex, sex == 'F', 'Female')) %>% 
                                 mutate(sex = replace(sex, sex == 'M', 'Male')) %>%
