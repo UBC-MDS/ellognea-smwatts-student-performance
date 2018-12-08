@@ -23,6 +23,7 @@ voilin_file <- args[2]
 main <- function(){
   # read in data
   student_math_perf <- read_csv(input_file)
+  # create violin plot
   violin_student_perf <- student_math_perf %>% 
     mutate(sex = fct_reorder(sex, final_math_grade)) %>% 
     ggplot(aes(sex)) +
